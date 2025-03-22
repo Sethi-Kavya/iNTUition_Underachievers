@@ -16,31 +16,18 @@ function getRecommendation() {
     })
     .then(response => response.json())
     .then(data => {
-        function cleanText(text) {
-            return text.replace(/\*\*/g, "").replace(/\n/g, "<br>");
+        function formatOutput(label, value) {
+            return `<h3>${label}:</h3><p>${value}</p>`;
         }
 
         document.getElementById("recommendationOutput").innerHTML = `
-            <h3>Tech Stack Recommendation</h3>
-            <p>${cleanText(data.tech_stack)}</p>
-
-            <h3>Data Storage Type & Structure</h3>
-            <p>${cleanText(data.data_storage)}</p>
-
-            <h3>System Architecture</h3>
-            <p>${cleanText(data.architecture)}</p>
-
-            <h3>API Requirements & Structure</h3>
-            <p>${cleanText(data.api_structure)}</p>
-
-            <h3>Codebase Structure</h3>
-            <pre>${cleanText(data.codebase)}</pre>
-
-            <h3>Deployment & Hosting Recommendations</h3>
-            <p>${cleanText(data.deployment)}</p>
-
-            <h3>Estimated Cost Breakdown</h3>
-            <p>${cleanText(data.cost)}</p>
+            ${formatOutput("Tech Stack Recommendation", data.tech_stack)}
+            ${formatOutput("Data Storage Type & Structure", data.data_storage)}
+            ${formatOutput("System Architecture", data.architecture)}
+            ${formatOutput("API Requirements & Structure", data.api_structure)}
+            ${formatOutput("Codebase Structure", data.codebase)}
+            ${formatOutput("Deployment & Hosting Recommendations", data.deployment)}
+            ${formatOutput("Estimated Cost Breakdown", data.cost)}
         `;
     })
     .catch(error => console.error("Error fetching recommendations:", error));
