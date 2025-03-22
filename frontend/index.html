@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Architecture Optimizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI-Based Software Architecture Recommendation</h1>
+        <form id="architectureForm">
+            <label>Business Domain:</label>
+            <input type="text" id="business_domain" placeholder="Enter business domain">
+
+            <label>Expected Traffic:</label>
+            <select id="expected_traffic">
+                <option value="">Select Traffic</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <label>Budget:</label>
+            <select id="budget">
+                <option value="">Select Budget</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <label>Security:</label>
+            <select id="security">
+                <option value="">Select Security Level</option>
+                <option value="basic">Basic</option>
+                <option value="moderate">Moderate</option>
+                <option value="high">High</option>
+            </select>
+
+            <label>Software Type:</label>
+            <input type="text" id="software_type" placeholder="Enter software type">
+
+            <button type="button" onclick="getRecommendation()">Get Recommendations</button>
+        </form>
+
+        <h2>Generated Architecture:</h2>
+        <div id="recommendationOutput"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
