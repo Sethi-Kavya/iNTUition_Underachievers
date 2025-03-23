@@ -9,46 +9,36 @@
 <body>
     <header>
         <img src="logo.png" alt="BluePrintAI Logo" class="logo">
-        <h1>BluePrintAI</h1>
-        <p>AI-Powered Software Architecture Optimization</p>
+  
+        
     </header>
 
     <div class="container">
         <h2>Get Your AI-Optimized Software Architecture</h2>
         <form id="architectureForm">
             <div class="form-group">
+                <label for="platform_description">Describe Your Platform:</label>
+                <textarea id="platform_description" placeholder="Describe the platform you want to create..." rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
                 <label for="business_domain">Business Domain:</label>
                 <input type="text" id="business_domain" placeholder="Enter business domain">
             </div>
 
-            <div class="form-group row">
+            <div class="form-group">
                 <label for="expected_traffic">Expected Traffic:</label>
-                <select id="expected_traffic">
-                    <option value="">Select Traffic</option>
-                    <option value="low">Low</option>
-                    <option value="medium">Medium</option>
-                    <option value="high">High</option>
-                </select>
+                <input type="text" id="expected_traffic" placeholder="Enter expected traffic (e.g., Low, Medium, High)">
             </div>
 
             <div class="form-group">
                 <label for="budget">Budget:</label>
-                <select id="budget">
-                    <option value="">Select Budget</option>
-                    <option value="low">Low</option>
-                    <option value="medium">Medium</option>
-                    <option value="high">High</option>
-                </select>
+                <input type="text" id="budget" placeholder="Enter budget (e.g., Low, Medium, High)">
             </div>
 
             <div class="form-group">
                 <label for="security">Security:</label>
-                <select id="security">
-                    <option value="">Select Security Level</option>
-                    <option value="basic">Basic</option>
-                    <option value="moderate">Moderate</option>
-                    <option value="high">High</option>
-                </select>
+                <input type="text" id="security" placeholder="Enter security level (e.g., Basic, Moderate, High)">
             </div>
 
             <div class="form-group">
